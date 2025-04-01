@@ -1,0 +1,15 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Criamos o objeto LCD com o endereço correto
+LiquidCrystal_I2C lcd(0x20, 16, 2);  // Endereço do LCD, 16 colunas, 2 linhas
+
+void setup() {
+    lcd.init();  // Inicializa o LCD
+    lcd.backlight();  // Liga a luz de fundo
+    lcd.setCursor(0, 0);  // Define a posição inicial do cursor
+    lcd.print("Teste LCD I2C");  // Exibe o texto no LCD
+}
+
+void loop() {
+}

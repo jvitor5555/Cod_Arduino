@@ -1,0 +1,13 @@
+#define BOTAO 7
+
+void setup() {
+    pinMode(BOTAO, INPUT_PULLUP);  // Usa resistência interna do Arduino
+    Serial.begin(9600);
+}
+
+void loop() {
+    if (digitalRead(BOTAO) == LOW) {  // O botão é acionado quando apertado
+        Serial.println("Botão pressionado!");
+        delay(200);  // Pequeno atraso para evitar leitura duplicada
+    }
+}
