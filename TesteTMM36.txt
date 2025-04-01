@@ -1,0 +1,17 @@
+#define TMP36_PIN A0
+
+void setup() {
+    Serial.begin(9600);
+}
+
+void loop() {
+    int sensorValue = analogRead(TMP36_PIN);
+    float voltage = sensorValue * (5.0 / 1023.0);
+    float temperature = (voltage - 0.5) * 100.0; 
+
+    Serial.print("Temperatura: ");
+    Serial.print(temperature);
+    Serial.println(" C");
+
+    delay(1000);
+}
