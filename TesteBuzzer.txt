@@ -1,0 +1,13 @@
+int buzzerPin = 11; // Pino do buzzer
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);  // Define o pino do buzzer como saída
+}
+
+void loop() {
+  tone(buzzerPin, 1000);  // Emite som no buzzer com frequência de 1 kHz
+  delay(1000);             // Aguarda 1 segundo (1000 milissegundos)
+  
+  noTone(buzzerPin);      // Desliga o som do buzzer
+  delay(1000);            // Aguarda 1 segundo
+}
